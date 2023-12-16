@@ -147,6 +147,15 @@ header {
 }
 
 /* ABOUT SECTION */
+#about-section p {
+    max-width: 40rem;
+    margin: auto;
+}
+
+#about-section h2 {
+    max-width: 40rem;
+    margin: auto auto 2rem auto;
+}
 
 /* PORTFOLIO SECTION */
 #portfolio-section {
@@ -227,11 +236,12 @@ footer p {
         display: none;
         position: absolute;
         flex-direction: column;
-        background: #e7dfd4;
+        background: #eeeeee;
         width: 100%;
         top: 3.7rem;
         left: 0;
         text-align: center;
+        border-bottom: #ee7b7b solid;
     }
 
     header {
@@ -260,21 +270,102 @@ footer p {
     .copyright p {
         text-align: center;
     }
+
+    .touch {
+        color: black;
+        background-color: #eeeeee;
+        padding-bottom: 3rem;
+    }
+
+    .hamburger-menu {
+        margin-top: 0.4rem;
+    }
+
+    .menu-open,
+    .menu-close {
+        font-size: 1.4rem;
+    }
 }
 
 /* MEDIA QUERIES IPAD */
 
 @media only screen and (min-width: 768px) and (max-width: 1180px) {
+    h1 {
+        font-size: 4.3rem;
+    }
+
+    body {
+        font-size: 95%;
+    }
+
+    .all-sections {
+        margin: 8%;
+    }
+
+    .section {
+        padding: 10% 15%;
+    }
 }
 
 /* MEDIA QUERIES MOBILE */
 
 @media only screen and (min-width: 0px) and (max-width: 767px) {
+    body {
+        font-size: 90%;
+    }
+
+    .all-sections {
+        margin: 5%;
+    }
+
+    .section {
+        padding: 5% 10%;
+    }
+
+    h1 {
+        font-size: 3.5rem;
+        line-height: 4rem;
+        margin-bottom: 3rem;
+    }
+
+    .card-img {
+        width: 23rem;
+        height: 17rem;
+    }
+
+    .card-text p,
+    h3 {
+        max-width: 20rem;
+        margin: 5% auto;
+    }
+
+    .card-text {
+        margin: 0 1rem;
+    }
+
+    #home-section {
+        flex-direction: column;
+        gap: 1.7rem;
+    }
+
+    #home-section p {
+        text-align: center;
+    }
+
+    .inner-header {
+        width: 80%;
+    }
 }
 
 /* MEDIA QUERIES DESKTOP */
 @media only screen and (min-width: 1180px) {
     .hamburger-menu {
         display: none;
+    }
+}
+
+@media only screen and (min-width: 1180px) and (max-width: 1419px) {
+    h1 {
+        font-size: 6rem;
     }
 }
