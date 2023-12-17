@@ -246,7 +246,7 @@ footer p {
 
     header {
         height: 3.75rem;
-        position: relative;
+        position: sticky;
         z-index: 10;
         display: flex;
         align-items: center;
@@ -274,7 +274,7 @@ footer p {
     .touch {
         color: black;
         background-color: #eeeeee;
-        padding-bottom: 3rem;
+        padding: 1.9rem 0 3rem 0;
     }
 
     .hamburger-menu {
@@ -294,16 +294,16 @@ footer p {
         font-size: 4.3rem;
     }
 
-    body {
-        font-size: 95%;
-    }
-
     .all-sections {
         margin: 8%;
     }
 
     .section {
-        padding: 10% 15%;
+        padding: 15% 15%;
+    }
+
+    .inner-header {
+        width: 85%;
     }
 }
 
@@ -319,7 +319,7 @@ footer p {
     }
 
     .section {
-        padding: 5% 10%;
+        padding: 15% 10%;
     }
 
     h1 {
