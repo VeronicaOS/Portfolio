@@ -257,6 +257,7 @@ button {
     font-family: "Raleway", sans-serif, Arial, Helvetica;
     font-weight: 400;
     background-color: white;
+    color: black;
     border-color: #ee7b7b;
     border-style: solid;
     border-width: 0.1rem;
