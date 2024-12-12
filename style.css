@@ -1,10 +1,15 @@
+:root {
+    --pink-color: #f28c97;
+    --grey-bg: #f3f2f1;
+}
+
 html {
     width: 100%;
 }
 
 body {
     margin: 0;
-    background-color: #eeee;
+    background-color: var(--grey-bg);
     color: black;
     font-family: "Raleway", sans-serif, Arial, Helvetica;
     font-size: 1.125rem;
@@ -18,9 +23,11 @@ body {
 }
 
 h1 {
+    color: var(--pink-color);
     text-align: center;
-    font-size: 8rem;
-    margin: 13% 5% 0 5%;
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin: 13% auto 0 auto;
 }
 
 .small {
@@ -28,20 +35,28 @@ h1 {
 }
 
 .pink-underline {
-    text-decoration: underline #ee7b7b;
+    text-decoration: underline var(--pink-color);
 }
 
 .pink-text {
-    color: #ee7b7b;
+    color: var(--pink-color);
 }
 
-.section {
+.section-a {
     padding: 15% 20%;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
+}
+
+.section-visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .seperation {
     border-style: solid;
-    border-color: #ee7b7b;
+    border-color: var(--pink-color);
 }
 
 h2,
@@ -56,8 +71,8 @@ h2,
 
 /* HEADER */
 header {
-    height: 5rem;
-    background-color: #eeeeeef6;
+    height: fit-content;
+    background-color: var(--grey-bg);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -69,11 +84,11 @@ header {
     width: 90%;
     display: flex;
     justify-content: space-between;
+    margin: 1rem 0;
 }
 
-.heart {
-    color: #ee7b7b;
-    font-size: 2rem;
+.inner-header img {
+    max-width: 4.5rem;
 }
 
 .navigation {
@@ -95,7 +110,7 @@ header {
     bottom: -0.5rem;
     width: 100%;
     height: 0.2rem;
-    background-color: #ffb2b2;
+    background-color: var(--pink-color);
     border-radius: 0.3rem;
     transform: scaleX(0);
     transform-origin: left;
@@ -109,20 +124,21 @@ header {
 
 .underline:hover,
 .underline:active {
-    color: #ee7b7b;
+    color: var(--pink-color);
 }
 
 .touch {
-    background-color: #ee7b7b;
-    color: #e7dfd4;
+    background-color: var(--pink-color);
+    color: var(--grey-bg);
     padding: 0.5rem;
     border-radius: 0.2rem;
     text-decoration: none;
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 .touch:hover {
     background-color: black;
-    color: #ee7b7b;
+    color: var(--pink-color);
 }
 
 /* HOME SECTION */
@@ -138,7 +154,7 @@ header {
 }
 
 .user {
-    color: #ee7b7b;
+    color: var(--pink-color);
     align-self: center;
 }
 
@@ -242,7 +258,7 @@ header {
 
 input,
 textarea {
-    border-color: #ee7b7b;
+    border-color: var(--pink-color);
     border-style: solid;
     border-width: 0.1rem;
     border-radius: 0.2rem;
@@ -258,7 +274,7 @@ button {
     font-weight: 400;
     background-color: white;
     color: black;
-    border-color: #ee7b7b;
+    border-color: var(--pink-color);
     border-style: solid;
     border-width: 0.1rem;
     height: 2.3rem;
@@ -270,11 +286,11 @@ button {
 
 .form-section .center {
     margin-bottom: auto;
-} 
+}
 
 /* FOOTER */
 footer {
-    border-top: #ee7b7b solid;
+    border-top: var(--pink-color) solid;
     margin: 0 10%;
 }
 
@@ -289,7 +305,7 @@ footer p {
         display: none;
         position: absolute;
         flex-direction: column;
-        background: #eeeeee;
+        background: var(--grey-bg);
         width: 100%;
         top: 3.7rem;
         left: 0;
@@ -326,7 +342,7 @@ footer p {
 
     .touch {
         color: black;
-        background-color: #eeeeee;
+        background-color: var(--grey-bg);
         padding: 1.9rem 0 3rem 0;
     }
 
@@ -352,7 +368,8 @@ footer p {
 
 @media only screen and (min-width: 768px) and (max-width: 1180px) {
     h1 {
-        font-size: 4.3rem;
+        font-size: 2rem;
+        line-height: 2rem;
     }
 
     .all-sections {
