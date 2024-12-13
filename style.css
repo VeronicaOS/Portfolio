@@ -8,7 +8,6 @@ html {
 }
 
 body {
-    margin: 0;
     background-color: var(--grey-bg);
     color: black;
     font-family: "Raleway", sans-serif, Arial, Helvetica;
@@ -18,16 +17,14 @@ body {
     margin: 0 auto;
 }
 
-.all-sections {
-    margin: 10% 10% 0 10%;
-}
-
 h1 {
+    width: 80rem;
     color: var(--pink-color);
     text-align: center;
-    font-size: 2.5rem;
-    font-weight: 600;
-    margin: 13% auto 0 auto;
+    font-size: 4rem;
+    font-weight: 400;
+    line-height: 5rem;
+    margin: 10% auto 0 auto;
 }
 
 .small {
@@ -57,6 +54,8 @@ h1 {
 .seperation {
     border-style: solid;
     border-color: var(--pink-color);
+    width: 90%;
+    justify-self: center;
 }
 
 h2,
@@ -65,8 +64,8 @@ h2,
     margin-bottom: 2rem;
 }
 
-.weight {
-    font-weight: 500;
+h2 {
+    font-weight: 400;
 }
 
 /* HEADER */
@@ -137,8 +136,9 @@ header {
 }
 
 .touch:hover {
-    background-color: black;
+    background-color: var(--grey-bg);
     color: var(--pink-color);
+    outline: solid var(--pink-color);
 }
 
 /* HOME SECTION */
@@ -184,43 +184,71 @@ header {
     gap: 4rem;
 }
 
+.card-flex {
+    display: flex;
+    flex-wrap: wrap; /* Allows cards to wrap into a new line */
+    justify-content: space-between; /* Ensures equal spacing between cards */
+    gap: 10px; /* Adds space between the cards */
+    margin: 0 auto;
+}
+
 .card-img {
-    width: 45rem;
+    /* width: 45rem;
     height: 33rem;
-    border-radius: 0.3rem 0.3rem 0 0;
+    border-radius: 0.3rem 0.3rem 0 0; */
+    width: 100%;
+    height: auto;
+    border-radius: 8px 8px 0 0;
 }
 
 .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    transition: 0.3s;
-    border-radius: 0.3rem;
-    width: max-content;
+    min-width: 300px;
+    max-width: 500px;
     background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
 }
 
 .card:hover {
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    transform: scale(1.3);
+    transition: transform 0.3s ease;
 }
 
 .center {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 5rem;
+    width: min-content;
 }
 
 .card-text {
-    margin: 0 4rem;
+    /* margin: 0 4rem; */
+    padding: 15px;
 }
 
+.card-text h3,
 .card-text p {
+    margin: 0;
+    padding: 5px 0;
+}
+
+/* .card-text p {
     box-sizing: border-box;
     max-width: 30rem;
-}
+} */
 
 .link-flex {
+    /* display: flex;
+    gap: 2rem; */
     display: flex;
-    gap: 2rem;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.weight {
+    font-weight: 500;
+}
+
+.pink-text {
+    color: #f08faf;
 }
 
 .fa-link,
@@ -241,61 +269,25 @@ header {
 }
 
 /* CONTACT */
+
+#contact-section {
+    background-color: var(--pink-color);
+    padding: 3% 0;
+}
+
 #contact-section h2 {
     text-align: center;
-}
-
-#textarea {
-    min-height: 7rem;
-    resize: none;
-}
-
-.input-control {
-    display: flex;
-    flex-direction: column;
-    padding-top: 1rem;
-}
-
-input,
-textarea {
-    border-color: var(--pink-color);
-    border-style: solid;
-    border-width: 0.1rem;
-    border-radius: 0.2rem;
-    width: 20rem;
-}
-
-input {
-    height: 2rem;
-}
-
-button {
-    font-family: "Raleway", sans-serif, Arial, Helvetica;
-    font-weight: 400;
-    background-color: white;
-    color: black;
-    border-color: var(--pink-color);
-    border-style: solid;
-    border-width: 0.1rem;
-    height: 2.3rem;
-    border-radius: 0.2rem;
-    margin-top: 2rem;
-    font-size: 1.1rem;
-    cursor: pointer;
-}
-
-.form-section .center {
-    margin-bottom: auto;
+    color: white;
 }
 
 /* FOOTER */
 footer {
-    border-top: var(--pink-color) solid;
     margin: 0 10%;
 }
 
 footer p {
     text-align: center;
+    font-size: 0.8rem;
 }
 
 /* MEDIA QUERIES MOBILE & IPAD */
