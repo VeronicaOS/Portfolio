@@ -1,5 +1,7 @@
 :root {
-    --pink-color: #f28c97;
+    --main-pink: #f28c97;
+    --dark-pink: #f26b7d;
+    --pink-bg: #f3b0b4;
     --grey-bg: #f3f2f1;
 }
 
@@ -19,7 +21,7 @@ body {
 
 h1 {
     width: 80rem;
-    color: var(--pink-color);
+    color: var(--dark-pink);
     text-align: center;
     font-size: 4rem;
     font-weight: 400;
@@ -32,11 +34,7 @@ h1 {
 }
 
 .pink-underline {
-    text-decoration: underline var(--pink-color);
-}
-
-.pink-text {
-    color: var(--pink-color);
+    text-decoration: underline var(--main-pink);
 }
 
 .section-a {
@@ -53,7 +51,7 @@ h1 {
 
 .seperation {
     border-style: solid;
-    border-color: var(--pink-color);
+    border-color: var(--main-pink);
     width: 90%;
     justify-self: center;
 }
@@ -66,17 +64,19 @@ h2,
 
 h2 {
     font-weight: 400;
+    color: var(--dark-pink);
+}
+
+h3 {
+    color: var(--dark-pink);
 }
 
 /* HEADER */
 header {
     height: fit-content;
-    background-color: var(--grey-bg);
     display: flex;
     justify-content: center;
     align-items: center;
-    position: sticky;
-    top: 0;
 }
 
 .inner-header {
@@ -109,7 +109,7 @@ header {
     bottom: -0.5rem;
     width: 100%;
     height: 0.2rem;
-    background-color: var(--pink-color);
+    background-color: var(--main-pink);
     border-radius: 0.3rem;
     transform: scaleX(0);
     transform-origin: left;
@@ -123,11 +123,11 @@ header {
 
 .underline:hover,
 .underline:active {
-    color: var(--pink-color);
+    color: var(--main-pink);
 }
 
 .touch {
-    background-color: var(--pink-color);
+    background-color: var(--main-pink);
     color: var(--grey-bg);
     padding: 0.5rem;
     border-radius: 0.2rem;
@@ -137,8 +137,8 @@ header {
 
 .touch:hover {
     background-color: var(--grey-bg);
-    color: var(--pink-color);
-    outline: solid var(--pink-color);
+    color: var(--main-pink);
+    outline: solid var(--main-pink);
 }
 
 /* HOME SECTION */
@@ -154,7 +154,7 @@ header {
 }
 
 .user {
-    color: var(--pink-color);
+    color: var(--main-pink);
     align-self: center;
 }
 
@@ -186,32 +186,30 @@ header {
 
 .card-flex {
     display: flex;
-    flex-wrap: wrap; /* Allows cards to wrap into a new line */
-    justify-content: space-between; /* Ensures equal spacing between cards */
-    gap: 10px; /* Adds space between the cards */
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
     margin: 0 auto;
 }
 
 .card-img {
-    /* width: 45rem;
-    height: 33rem;
-    border-radius: 0.3rem 0.3rem 0 0; */
     width: 100%;
-    height: auto;
+    height: 15rem;
     border-radius: 8px 8px 0 0;
 }
 
 .card {
-    min-width: 300px;
-    max-width: 500px;
+    width: 380px;
+    height: 500px;
     background-color: white;
     border-radius: 8px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
+    box-sizing: border-box;
 }
 
 .card:hover {
-    transform: scale(1.3);
+    transform: scale(1.1);
     transition: transform 0.3s ease;
 }
 
@@ -220,7 +218,6 @@ header {
 }
 
 .card-text {
-    /* margin: 0 4rem; */
     padding: 15px;
 }
 
@@ -230,31 +227,21 @@ header {
     padding: 5px 0;
 }
 
-/* .card-text p {
-    box-sizing: border-box;
-    max-width: 30rem;
-} */
-
 .link-flex {
-    /* display: flex;
-    gap: 2rem; */
     display: flex;
-    justify-content: space-between;
     margin-top: 15px;
+    gap: 1rem;
 }
 
 .weight {
     font-weight: 500;
 }
 
-.pink-text {
-    color: #f08faf;
-}
-
 .fa-link,
 .fa-github,
 .fa-linkedin {
     font-size: 2rem;
+    color: var(--dark-pink);
 }
 
 .fa-link:hover,
@@ -271,13 +258,18 @@ header {
 /* CONTACT */
 
 #contact-section {
-    background-color: var(--pink-color);
+    background-color: var(--pink-bg);
     padding: 3% 0;
 }
 
 #contact-section h2 {
     text-align: center;
-    color: white;
+    background-color: var(--grey-bg);
+    width: 18rem;
+    height: 3rem;
+    border-radius: 0.2rem;
+    justify-self: center;
+    align-content: center;
 }
 
 /* FOOTER */
