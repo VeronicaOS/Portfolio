@@ -25,7 +25,7 @@ main {
 }
 
 h1 {
-    width: 80rem;
+    width: 70rem;
     color: var(--dark-pink);
     text-align: center;
     font-size: 4rem;
@@ -358,55 +358,64 @@ footer p {
 
 @media only screen and (min-width: 768px) and (max-width: 1180px) {
     h1 {
-        font-size: 2rem;
-        line-height: 2rem;
+        width: 40rem;
+        font-size: 3rem;
+        line-height: 3.5rem;
     }
 
-    .all-sections {
-        margin: 8%;
+    .section,
+    .section-a {
+        padding: 10%;
     }
 
-    .section {
-        padding: 15% 15%;
-    }
-
-    .inner-header {
+    .inner-header,
+    .seperation {
         width: 85%;
+    }
+
+    .card-flex {
+        justify-content: center;
+    }
+
+    .card {
+        width: 310px;
+        height: 520px;
     }
 }
 
 /* MEDIA QUERIES MOBILE */
 
 @media only screen and (min-width: 0px) and (max-width: 767px) {
-    body {
-        font-size: 90%;
+    .section,
+    .section-a {
+        padding: 5%;
     }
 
-    .all-sections {
-        margin: 5%;
-    }
-
-    .section {
+    .section-a {
         padding: 15% 10%;
     }
 
     h1 {
-        width: auto;
+        width: 20rem;
+        font-size: 2rem;
+        line-height: 2.5rem;
     }
 
-    .card-img {
-        width: 23rem;
-        height: 17rem;
+    .card-flex {
+        justify-content: center;
     }
 
-    .card-text p,
-    h3 {
-        max-width: 20rem;
-        margin: 5% auto;
+    .card-flex h2 {
+        font-size: 1.5rem;
     }
 
-    .card-text {
-        margin: 0 1rem;
+    .card {
+        width: 280px;
+        height: 560px;
+    }
+
+    .link-flex {
+        margin: 0;
     }
 
     #home-section {
@@ -418,20 +427,15 @@ footer p {
         text-align: center;
     }
 
-    .inner-header {
+    .inner-header,
+    .seperation {
         width: 80%;
     }
 }
 
 /* MEDIA QUERIES DESKTOP */
-@media only screen and (min-width: 1180px) {
+@media only screen and (min-width: 1181px) {
     .hamburger-menu {
         display: none;
-    }
-}
-
-@media only screen and (min-width: 1180px) and (max-width: 1419px) {
-    h1 {
-        font-size: 6rem;
     }
 }
