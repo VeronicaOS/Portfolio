@@ -54,11 +54,15 @@ h1 {
     transform: translateY(0);
 }
 
+.flex-seperation {
+    display: flex;
+    justify-content: center;
+}
+
 .seperation {
     border-style: solid;
     border-color: var(--main-pink);
     width: 90%;
-    justify-self: center;
 }
 
 h2,
@@ -354,7 +358,6 @@ footer p {
         line-height: 3.5rem;
     }
 
-    .section,
     .section-a {
         padding: 10%;
     }
@@ -377,11 +380,6 @@ footer p {
 /* MEDIA QUERIES MOBILE */
 
 @media only screen and (min-width: 0px) and (max-width: 767px) {
-    .section,
-    .section-a {
-        padding: 5%;
-    }
-
     .section-a {
         padding: 15% 10%;
     }
