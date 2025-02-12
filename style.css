@@ -101,7 +101,11 @@ header {
 }
 
 .inner-header img {
-    max-width: 4.5rem;
+    max-width: 4.5vw;
+}
+
+.inner-header a {
+    font-size: 2vh;
 }
 
 .navigation {
@@ -297,7 +301,7 @@ footer {
 
 footer p {
     text-align: center;
-    font-size: 0.8rem;
+    font-size: 1.5vh;
 }
 
 /* MEDIA QUERIES MOBILE & IPAD */
