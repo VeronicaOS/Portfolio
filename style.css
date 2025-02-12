@@ -19,11 +19,6 @@ body {
     margin: 0 auto;
 }
 
-main {
-    max-width: 1440px;
-    margin: 0 auto;
-}
-
 h1 {
     width: 70rem;
     color: var(--dark-pink);
@@ -43,7 +38,17 @@ h1 {
 }
 
 .section-a {
+    max-width: 1440px;
+    margin: 0 auto;
     padding: 15% 20%;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
+}
+
+.section {
+    margin: 0;
+    max-width: 100vw;
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
@@ -207,14 +212,19 @@ header {
     border-radius: 8px 8px 0 0;
 }
 
-.card {
+.card,
+.card1 {
     width: 380px;
     height: 500px;
     background-color: white;
     border-radius: 8px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
     box-sizing: border-box;
+}
+
+.card1:hover {
+    transform: none;
+    transition: none;
 }
 
 .card:hover {
@@ -371,7 +381,8 @@ footer p {
         justify-content: center;
     }
 
-    .card {
+    .card,
+    .card1 {
         width: 310px;
         height: 530px;
     }
@@ -398,9 +409,10 @@ footer p {
         font-size: 1.5rem;
     }
 
-    .card {
-        width: 280px;
-        height: 510px;
+    .card,
+    .card1 {
+        width: 350px;
+        height: 500px;
     }
 
     .link-flex {

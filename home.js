@@ -2,7 +2,7 @@ const menuOpen = document.querySelector(".menu-open");
 const menuClose = document.querySelector(".menu-close");
 const navigation = document.querySelector(".navigation");
 const links = document.querySelectorAll(".navigation a");
-const sections = document.querySelectorAll(".section-a");
+const sections = document.querySelectorAll(".section-a, .section");
 console.log("Observing sections:", sections);
 
 // HAMBURGER MENU
